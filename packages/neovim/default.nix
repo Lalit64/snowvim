@@ -43,7 +43,7 @@ let
 
           # formatters
           stylua
-          nixpkgs-fmt
+          nixfmt-rfc-style
           shfmt
           gofumpt
           rustfmt
