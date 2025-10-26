@@ -24,6 +24,8 @@ let
     {
       lspsAndRuntimeDeps = {
         general = with pkgs; [
+          ripgrep
+
           # lsps
           lua-language-server
           nixd
