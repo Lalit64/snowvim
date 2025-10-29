@@ -33,7 +33,7 @@ map("v", "<leader>/", "gc", "Toggle Comment", true)
 map("n", "<leader>ct", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", "[C]ode [T]rouble diagnostics")
 map("n", "<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 map("n", "gd", vim.lsp.buf.declaration, "[g]oto [d]eclaration")
-map("n", "gd", vim.lsp.buf.definition, "[G]oto [D]efinition")
+map("n", "gD", vim.lsp.buf.definition, "[G]oto [D]efinition")
 map("n", "<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame Symbol")
 
 map("n", "<leader>fm", function()

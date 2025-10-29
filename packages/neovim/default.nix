@@ -88,7 +88,10 @@ let
           snacks-nvim
           render-markdown-nvim
           mini-icons
+
           tokyonight-nvim
+          catppuccin-nvim
+          gruvbox-nvim
         ];
       };
 
