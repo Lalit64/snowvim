@@ -13,7 +13,6 @@ require "snowvim.plugins.ui"
 require "snowvim.plugins.keymaps"
 require "snowvim.plugins.lsps"
 require "snowvim.plugins.themes"
-require "snowvim.plugins.scrollEOF"
 require "snowvim.plugins.treesitter"
 
 require("snowvim.opts").final()

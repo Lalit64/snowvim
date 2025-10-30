@@ -40,8 +40,8 @@
           hooks = {
             nixfmt = {
               enable = true;
-              entry = "${channels.nixpkgs.nixfmt-rfc-style}/bin/nixfmt";
-              extraPackages = [ channels.nixpkgs.nixfmt-rfc-style ];
+              entry = "${channels.nixpkgs.nixfmt}/bin/nixfmt";
+              extraPackages = [ channels.nixpkgs.nixfmt ];
             };
           };
         };

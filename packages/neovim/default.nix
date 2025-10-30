@@ -51,6 +51,7 @@ let
           prettierd
 
           # linters
+          statix
           stylelint
           eslint_d
         ];

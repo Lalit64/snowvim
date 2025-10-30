@@ -13,7 +13,7 @@ show:
     nix flake show
 
 # Update flake
-update:
+up:
     nix flake update
 
 # Check flake
@@ -31,4 +31,3 @@ commit:
 [group('jj')]
 push:
   jj git push
-

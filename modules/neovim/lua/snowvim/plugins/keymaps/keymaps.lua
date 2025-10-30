@@ -60,7 +60,7 @@ map("n", "<leader>lg", function()
   Snacks.lazygit.open()
 end, "[L]azy[G]it")
 map({ "n", "t" }, "<C-t>", function()
-  Snacks.terminal.toggle()
+  Snacks.terminal.toggle "zsh"
 end, "Terminal")
 
 -- Bufferline
