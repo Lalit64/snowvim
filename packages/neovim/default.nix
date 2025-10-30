@@ -81,6 +81,7 @@ let
           vim-sleuth
           noice-nvim
           nvim-notify
+          noice-nvim
           mini-icons
           nui-nvim
           lualine-nvim

@@ -25,14 +25,19 @@ require("lze").load {
         quickfile = { enabled = false },
         dashboard = snacks_dashboard.dashboard,
         picker = snack_picker.picker,
-        notifier = {
-          enabled = true,
-          style = "compact",
-          timeout = 2500,
-        },
         image = {
           enabled = true,
           doc = { inline = false, float = true },
+        },
+        indent = {
+          enabled = true,
+        },
+        scroll = {
+          enabled = true,
+          animate = {
+            duration = { step = 20, total = 200 },
+            easing = "linear",
+          },
         },
         statuscolumn = {
           enabled = false,
