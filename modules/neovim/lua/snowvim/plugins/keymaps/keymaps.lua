@@ -7,10 +7,13 @@ local function map(mode, keys, action, desc, isRemap)
 end
 
 -- General
-map("n", "<Up>", "<Nop>")
-map("n", "<Left>", "<Nop>")
-map("n", "<Right>", "<Nop>")
-map("n", "<Down>", "<Nop>")
+map({ "n", "i" }, "<Up>", "<Nop>")
+map({ "n", "i" }, "<Left>", "<Nop>")
+map({ "n", "i" }, "<Right>", "<Nop>")
+map({ "n", "i" }, "<Down>", "<Nop>")
+map({ "n", "i" }, "<Down>", "<Nop>")
+
+map("i", "jk", "<Esc>")
 
 map("i", "<C-b>", "<ESC>^i", "move beginning of line")
 map("i", "<C-e>", "<End>", "move end of line")

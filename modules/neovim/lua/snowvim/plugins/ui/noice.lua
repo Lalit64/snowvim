@@ -5,7 +5,8 @@ require("lze").load {
       require("notify").setup {
         render = "compact",
         background_colour = "#000000",
-        fps = 120,
+        timeout = 3000,
+        fps = 60,
       }
     end,
   },
