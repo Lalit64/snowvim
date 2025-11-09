@@ -27,6 +27,7 @@
       nix = [
         nix-doc
         nixd
+        nil
         alejandra
         statix
       ];
@@ -117,7 +118,7 @@
       ];
       editing = [
         blink-pairs
-        comment-nvim
+        mini-comment
         better-escape-nvim
         tabout-nvim
         mini-surround

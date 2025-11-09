@@ -36,7 +36,7 @@ return {
           accept = { auto_brackets = { enabled = false } },
           menu = {
             auto_show = true,
-            border = "none",
+            border = "solid",
             scrollbar = false,
           },
           documentation = {

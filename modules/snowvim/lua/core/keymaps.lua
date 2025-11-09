@@ -13,6 +13,13 @@ M.inital = function()
   map("n", "<space>", "<Nop>")
   map("x", "<space>", "<Nop>")
 
+  map("i", "<C-b>", "<ESC>^i")
+  map("i", "<C-e>", "<End>")
+  map("i", "<C-h>", "<Left>")
+  map("i", "<C-l>", "<Right>")
+  map("i", "<C-j>", "<Down>")
+  map("i", "<C-k>", "<Up>")
+
   map("n", "[[", "<Nop>")
   map("n", "]]", "<Nop>")
   map("n", ")", "<Nop>")
@@ -33,9 +40,6 @@ M.inital = function()
 
   map("n", "<Esc>", "<cmd>noh<CR>")
 
-  map("n", "<leader>/", "gcc")
-  map("v", "<leader>/", "gc")
-
   -- auto indent on <tab>
   map("i", "<tab>", function()
     local _, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -54,9 +58,6 @@ end
 
 M.final = function()
   map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
-  map("n", "gd", vim.lsp.buf.declaration, { desc = "[G]oto [D]eclaration" })
-  map("n", "gD", vim.lsp.buf.definition, { desc = "[G]oto [D]efinition" })
-  map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "[R]e[n]ame Symbol" })
 
   map("n", "<leader>fh", Snacks.picker.help, { desc = "[F]ind [H]elp" })
   map("n", "<leader>fk", Snacks.picker.keymaps, { desc = "[F]ind [K]eymaps" })
@@ -79,6 +80,9 @@ M.final = function()
   map("n", "q", function()
     Snacks.bufdelete()
   end, { desc = "Close buffer" })
+
+  map("v", "<leader>/", "gc", { remap = true })
+  map("n", "<leader>/", "gcc", { remap = true }) -- Use with leader n to comment n lines
 
   map("n", "<leader>lg", function()
     Snacks.lazygit.open()

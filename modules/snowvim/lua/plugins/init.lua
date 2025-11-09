@@ -35,4 +35,7 @@ require("lze").load {
   { import = "plugins.lsp.lazydev" },
   { import = "plugins.lsp.conform" },
   { import = "plugins.lsp.lint" },
+
+  -- misc
+  { import = "plugins.misc" },
 }

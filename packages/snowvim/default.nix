@@ -18,7 +18,7 @@
         suffix-path = true;
         suffix-LD = true;
         wrapRc = true;
-        aliases = ["vim"];
+        aliases = ["vim" "svim"];
         neovim-unwrapped = inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.neovim;
       };
 
@@ -31,7 +31,7 @@
 
       extra = {
         colorscheme = {
-          name = "tokyonight";
+          name = "gruvbox";
           style = "dark";
           transparent = true;
         };

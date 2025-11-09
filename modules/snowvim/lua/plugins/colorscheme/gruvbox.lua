@@ -27,6 +27,16 @@ return {
         end
         if nixCats.extra "colorscheme.transparent" ~= nil then
           _trans = nixCats.extra "colorscheme.transparent"
+
+          if _trans then
+            require("gruvbox").setup {
+              overrides = {
+                TabLineFill = { bg = "none" },
+                StatusLine = { bg = "none" },
+                StatusLineNC = { bg = "none" },
+              },
+            }
+          end
         end
       end
     end
@@ -34,11 +44,6 @@ return {
     require("gruvbox").setup {
       transparent_mode = _trans,
       terminal_colors = true,
-      overrides = {
-        TabLineFill = { bg = "none" },
-        StatusLine = { bg = "none" },
-        StatusLineNC = { bg = "none" },
-      },
     }
   end,
 }
