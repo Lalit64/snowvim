@@ -27,9 +27,6 @@
 
       alias.packages.default = "snowvim";
 
-      nixosModules.default = import (./packages/snowvim/default.nix).nixosModule;
-      homeModules.default = import (./packages/snowvim/default.nix).homeModule;
-
       outputs-builder = channels: {
         formatter = channels.nixpkgs.nixfmt-rfc-style;
       };

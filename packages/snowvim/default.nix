@@ -46,30 +46,6 @@ let
   };
 
   defaultPackageName = "snowvim";
-
-  nixosModule = utils.mkNixosModules {
-    moduleNamespace = [ defaultPackageName ];
-    inherit
-      defaultPackageName
-      luaPath
-      categoryDefinitions
-      packageDefinitions
-      ;
-
-    nixpkgs = pkgs;
-  };
-
-  homeModule = utils.mkHomeModules {
-    moduleNamespace = [ defaultPackageName ];
-    inherit
-      defaultPackageName
-      luaPath
-      categoryDefinitions
-      packageDefinitions
-      ;
-
-    nixpkgs = pkgs;
-  };
 in
 utils.baseBuilder luaPath {
   inherit pkgs;
