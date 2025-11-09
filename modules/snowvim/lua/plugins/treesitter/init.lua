@@ -1,0 +1,47 @@
+return {
+  {
+    "nvim-treesitter",
+    for_cat = {
+      cat = "tools.treesitter",
+      default = true,
+    },
+    dep_of = {
+      "render-markdown.nvim",
+    },
+    event = "DeferredUIEnter",
+    load = function(name)
+      vim.cmd.packadd(name)
+      vim.cmd.packadd "nvim-treesitter-refactor"
+      vim.cmd.packadd "nvim-treesitter-textobjects"
+    end,
+    after = function(plugin)
+      -- Configure treesitter
+      require("nvim-treesitter.configs").setup {
+        -- Highlight module
+        highlight = {
+          enable = true,
+          disable = { "latex" },
+          additional_vim_regex_highlighting = { "latex", "markdown" },
+        },
+        -- Indent module
+        indent = {
+          enable = false,
+        },
+        -- Incremental selection
+        incremental_selection = {
+          enable = true,
+          keymaps = {
+            init_selection = "<C-Space>",
+            node_incremental = "<C-Space",
+            node_decremental = "<C-S-Space",
+            scope_incremental = "<C-s>",
+          },
+        },
+        -- Text objects
+        textobjects = require "plugins.treesitter.textobjects",
+        -- Refactor module
+        refactor = require "plugins.treesitter.refactor",
+      }
+    end,
+  },
+}
