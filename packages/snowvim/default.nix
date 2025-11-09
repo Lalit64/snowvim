@@ -37,7 +37,7 @@ let
 
         extra = {
           colorscheme = {
-            name = "gruvbox";
+            name = "tokyonight";
             style = "dark";
             transparent = true;
           };

@@ -16,6 +16,7 @@ require("lze").load {
   -- colorscheme
   { import = "plugins.colorscheme.minitheme" }, -- use for stylix
   { import = "plugins.colorscheme.gruvbox" },
+  { import = "plugins.colorscheme.tokyonight" },
 
   -- treesitter
   { import = "plugins.treesitter" },

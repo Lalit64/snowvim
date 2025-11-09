@@ -8,30 +8,17 @@ return {
     key = "colorscheme.name",
     value = "tokyonight",
   },
-  dep_of = {
-    "lualine.nvim",
-  },
   colorscheme = {
+    "tokyonight-day",
+    "tokyonight-moon",
+    "tokyonight-night",
+    "tokyonight-storm",
     "tokyonight",
   },
-  event = { "DeferredUIEnter" },
   after = function(plugin)
-    local _trans = false
-
-    if require("nixCatsUtils").isNixCats then
-      if nixCats.extra "colorscheme.name" == "tokyonight" then
-        if nixCats.extra "colorscheme.style" == "light" then
-          vim.o.background = "light"
-        else
-          vim.o.background = "dark"
-        end
-        if nixCats.extra "colorscheme.transparent" ~= nil then
-          _trans = nixCats.extra "colorscheme.transparent"
-        end
-      end
-    end
-
+    -- Load us
     require("tokyonight").setup {
+      style = "moon",
       transparent = true,
       on_highlights = function(hl, c)
         hl.TabLineFill = {
