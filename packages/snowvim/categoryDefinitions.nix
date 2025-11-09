@@ -1,8 +1,4 @@
-{
-  inputs,
-  ...
-}:
-{
+{inputs, ...}: {
   pkgs,
   settings,
   categories,
@@ -10,8 +6,7 @@
   name,
   mkNvimPlugin,
   mkPlugin,
-}@packageDef:
-{
+} @ packageDef: {
   lspsAndRuntimeDeps = with pkgs; {
     tools = {
       treesitter = [
@@ -32,7 +27,7 @@
       nix = [
         nix-doc
         nixd
-        nixfmt
+        alejandra
         statix
       ];
       lua = [
@@ -161,25 +156,25 @@
     };
   };
 
-  sharedLibraries = { };
+  sharedLibraries = {};
 
-  environmentVariables = { };
+  environmentVariables = {};
 
-  extraWrapperArgs = { };
+  extraWrapperArgs = {};
 
   python3.libraries = {
-    system =
-      python-pkgs: with python-pkgs; [
+    system = python-pkgs:
+      with python-pkgs; [
         pynvim
       ];
     languages = {
-      python =
-        python-pkgs: with python-pkgs; [
+      python = python-pkgs:
+        with python-pkgs; [
           ruff
           basedpyright
         ];
     };
   };
 
-  extraLuaPackages = { };
+  extraLuaPackages = {};
 }

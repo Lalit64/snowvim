@@ -4,13 +4,11 @@
   system,
   ...
 }:
-
 pkgs.mkShell {
-  nativeBuildInputs =
-    with pkgs;
+  nativeBuildInputs = with pkgs;
     [
       treefmt
-      nixpkgs-fmt
+      alejandra
       stylua
       just
     ]

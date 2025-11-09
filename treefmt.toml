@@ -4,6 +4,6 @@ options = []
 includes = [ "*.lua" ]
 
 [formatter.nix]
-command = "nixfmt"
+command = "alejandra"
 options = []
 includes = [ "*.nix" ]

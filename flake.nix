@@ -14,8 +14,7 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
-  outputs =
-    inputs:
+  outputs = inputs:
     inputs.snowfall-lib.mkFlake {
       inherit inputs;
 
@@ -28,7 +27,7 @@
       alias.packages.default = "snowvim";
 
       outputs-builder = channels: {
-        formatter = channels.nixpkgs.nixfmt-rfc-style;
+        formatter = channels.nixpkgs.alejandra;
       };
     };
 }
