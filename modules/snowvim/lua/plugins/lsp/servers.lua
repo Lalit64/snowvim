@@ -26,10 +26,19 @@ M.basedpyright = {
 
 M.nixd = {
   filetypes = { "nix" },
-}
-
-M.nil_ls = {
-  filetypes = { "nix" },
+  settings = {
+    nixd = {
+      nixpkgs = { expr = "import <nixpkgs> {}" },
+      options = {
+        darwin = {
+          expr = "(builtins.getFlake ./.).darwinConfigurations.lalits-mbp.options",
+        },
+        home_manager = {
+          expr = '(builtins.getFlake ./.).homeConfigurations."lalit@lalits-mbp".options',
+        },
+      },
+    },
+  },
 }
 
 M.gopls = {}
